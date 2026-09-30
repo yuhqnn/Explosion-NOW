@@ -1,0 +1,56 @@
+body{
+    background-color: black;
+}
+#box{
+    width: 600px;
+    height: 250px;
+    background-color: rgb(0, 255, 238);
+    font-size: 13em;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    animation-name: silly;
+    animation-duration: 5s;
+    animation-direction: reverse;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideleft{
+    from{transform: translateX(100%)}
+}
+@keyframes slideright{
+    to{transform: translateX(100%)}
+}
+@keyframes slideup{
+    from{transform: translateY(100%)}
+}
+@keyframes slidedown{
+    to{transform: translateY(100%)}
+}
+@keyframes rotate{
+    25%{transform: rotateX(720deg)}
+    from{transform: translateX(100%)}
+}
+@keyframes grow{
+    50%{transform: scale(2,2)}
+}
+@keyframes silly{
+    95%{transform: scale(4,0.5)}
+    95%{opacity: 0}
+    50%{box-shadow: 0px 0px 50px rgb(255, 180, 235)}
+    50%{background-color: rgb(60, 0, 255)}
+    60%{background-color: rgb(0, 255, 4)}
+    80%{background-color: rgb(255, 180, 235)}
+}
+@keyframes fade{
+    50%{opacity: 0}
+}
+@keyframes colorchange{
+    0%{background-color: rgb(0, 255, 238)}
+    20%{background-color: rgb(255, 0, 0)}
+    40%{background-color: rgb(166, 0, 255)}
+    60%{background-color: rgb(0, 255, 4)}
+    80%{background-color: rgb(255, 180, 235)}
+}
+@keyframes glow{
+    100%{box-shadow: 0px 0px 100px rgb(255, 180, 235)}
+}
