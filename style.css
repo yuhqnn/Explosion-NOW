@@ -1,56 +1,98 @@
-body{
-    background-color: black;
-}
-#box{
-    width: 600px;
-    height: 250px;
-    background-color: rgb(0, 255, 238);
-    font-size: 13em;
-    text-align: center;
-    font-family:'Times New Roman', Times, serif;
-    animation-name: silly;
-    animation-duration: 5s;
-    animation-direction: reverse;
-    animation-timing-function: ease-in-out;
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    background-repeat: repeat-x;
+    margin-inline: auto;
+    align-items: center;
+    width: 910px;
+    height: auto;
 }
 
-@keyframes slideleft{
-    from{transform: translateX(100%)}
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-optical-sizing: auto;
+    color: #910616;
+    font-size: 20px;
 }
-@keyframes slideright{
-    to{transform: translateX(100%)}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    width: 150px;
+    color: #ffffff;
+    font-family: 'Jacquard 24';
+    font-size: 20px;
+    background-color: #d1061b;
 }
-@keyframes slideup{
-    from{transform: translateY(100%)}
+
+.text {
+    margin-inline: auto;
+    text-align: center;
 }
-@keyframes slidedown{
-    to{transform: translateY(100%)}
+
+#gif {
+    margin-top: 20px;
 }
-@keyframes rotate{
-    25%{transform: rotateX(720deg)}
-    from{transform: translateX(100%)}
+
+#mainTitle {
+    font-family: 'Jacquard 24';
+    font-weight: 400;
+    font-size: 70px;
+    color: #d1061b;
+    margin-bottom: 10px;
 }
-@keyframes grow{
-    50%{transform: scale(2,2)}
+
+#logo-back {
+    width: 300px;
+    height: auto;
+    margin-inline: auto;
+    align-items: center;
+    animation: grow 2.5s;
+    scale: 100%;
+    animation-timing-function: cubic-bezier(0.2, 1, 0, 1);
+
 }
-@keyframes silly{
-    95%{transform: scale(4,0.5)}
-    95%{opacity: 0}
-    50%{box-shadow: 0px 0px 50px rgb(255, 180, 235)}
-    50%{background-color: rgb(60, 0, 255)}
-    60%{background-color: rgb(0, 255, 4)}
-    80%{background-color: rgb(255, 180, 235)}
+
+#logo-text {
+    width: 300px;
+    position: relative;
+    top: -205px;
+    left: 5px;
+    animation: fade 3s;
+    animation-timing-function: cubic-bezier(0, 1.07, 0.72, 1.02);
+    animation-delay: 2.5s;
+    opacity: 0%;
 }
-@keyframes fade{
-    50%{opacity: 0}
+
+#logo {
+    height: 200px;
+    width: 300px;
+    margin-inline: auto;
 }
-@keyframes colorchange{
-    0%{background-color: rgb(0, 255, 238)}
-    20%{background-color: rgb(255, 0, 0)}
-    40%{background-color: rgb(166, 0, 255)}
-    60%{background-color: rgb(0, 255, 4)}
-    80%{background-color: rgb(255, 180, 235)}
+
+
+
+@keyframes grow {
+    from {
+        scale: 0;
+        rotate: 0;
+    }
+
+    to {
+        scale: 1;
+        rotate: 720deg Y;
+    }
+
 }
-@keyframes glow{
-    100%{box-shadow: 0px 0px 100px rgb(255, 180, 235)}
+
+@keyframes fade {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
