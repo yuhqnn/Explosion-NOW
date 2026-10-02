@@ -2,8 +2,10 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-image: url('assets/pixil-layer-Layer 4.png');
     background-color: rgb(255, 255, 255);
     background-repeat: repeat-x;
+    background-size:auto;
     margin-inline: auto;
     align-items: center;
     width: 910px;
@@ -49,7 +51,7 @@ button {
     height: auto;
     margin-inline: auto;
     align-items: center;
-    animation: grow 2.5s;
+    animation: logo-back-animation 2.5s;
     scale: 100%;
     animation-timing-function: cubic-bezier(0.2, 1, 0, 1);
 
@@ -60,8 +62,8 @@ button {
     position: relative;
     top: -205px;
     left: 5px;
-    animation: fade 3s;
-    animation-timing-function: cubic-bezier(0, 1.07, 0.72, 1.02);
+    animation: logo-text-animation 3s;
+    animation-timing-function: steps(30);
     animation-delay: 2.5s;
     opacity: 0%;
 }
@@ -74,7 +76,7 @@ button {
 
 
 
-@keyframes grow {
+@keyframes logo-back-animation {
     from {
         scale: 0;
         rotate: 0;
@@ -87,12 +89,14 @@ button {
 
 }
 
-@keyframes fade {
+@keyframes logo-text-animation {
     from {
         opacity: 0%;
+        scale: 2;
     }
 
     to {
+        scale: 1;
         opacity: 100%;
     }
 }
