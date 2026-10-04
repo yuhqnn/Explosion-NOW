@@ -1,17 +1,20 @@
-(function(){
-    
-        document.getElementById(`explodeBUTTON`).style.opacity = 1;
-        document.getElementById(`laterBUTTON`).style.opacity = 1;
-        document.getElementById(`backBUTTON`).style.opacity= 1;
-    })();
 
 const Backbtn = document.getElementById(`backBUTTON`);
-
-Backbtn.onclick = function(){
-    console.log("ciclks")
-    window.location.href="index.html"
-}
 const Explodebtn = document.getElementById(`explodeBUTTON`);
-Explodebtn.onclick = function(){
-    window.location.href="explosion.html"
+const ExplodeAgainbtn = document.getElementById(`explodeAgainBUTTON`);
+const explosionCount = document.getElementById(`explosion-count`);
+let explodeNum = 1;
+localStorage.setItem('explosion Count', explodeNum);
+console.log(localStorage.getItem('explosion Count'));
+
+Backbtn.onclick = function () {
+    window.location.href = "index.html"
+}
+
+ExplodeAgainbtn.onclick = function () {
+    explodeNum += 1
+    localStorage.setItem('explosion Count', explodeNum)
+    console.log(localStorage.getItem('explosion Count'));
+    explosionCount.textContent = "explosions: " + explodeNum
+
 }

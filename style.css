@@ -17,10 +17,17 @@ p {
     font-optical-sizing: auto;
     color: #910616;
     font-size: 20px;
+    margin:5px;
+}
+
+footer{
+    color:#000000;
+    text-align: center;
+    font-size: small;
 }
 
 button {
-    margin: 5px;
+    margin: 20px;
     padding: 10px;
     width: 300px;
     color: #ffffff;
@@ -33,10 +40,26 @@ button:hover{
     color: #d1061b;
     background-color: #ffffff;
     width: 310px;
+    animation: hover-animation 0.5s;
+    animation-fill-mode: forwards;
     
 }
+
+#indexButtons{
+    display: flexbox;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    opacity: 0%;
+    animation: fade-in 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+}
+#indexButtons div{
+    
+    background-color: #d1061b;
+}
 #MainBody{
-    opacity: 0;
     margin-inline: auto;
     align-items: center;
     
@@ -45,15 +68,18 @@ button:hover{
 .text {
     margin-inline: auto;
     text-align: center;
-    opacity:0;
+    opacity: 0%;
+    animation: fade-in 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
 }
 
 #gif {
     margin-top: 20px;
-    opacity:0;
-}
-#angry{
-    opacity:0;
+    opacity: 0%;
+    animation: fade-in 10s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
 }
 
 #mainTitle {
@@ -62,7 +88,6 @@ button:hover{
     font-size: 70px;
     color: #d1061b;
     margin-bottom: 10px;
-    opacity: 0;
 }
 
 #logo-back {
@@ -84,6 +109,7 @@ button:hover{
     animation: logo-text-animation 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 2.5s;
+    animation-fill-mode: forwards;
     opacity: 0%;
 }
 
@@ -95,15 +121,9 @@ button:hover{
 
 #backBUTTON{
     width:100px;
-    opacity:0;
 }
-
-#explodeBUTTON{
-    opacity:0;
-}
-
-#laterBUTTON{
-    opacity:0;
+#global-count{
+    font-size: small;
 }
 
 @keyframes logo-back-animation {
@@ -132,5 +152,14 @@ button:hover{
 }
 
 @keyframes hover-animation{
-    to{scale: 1.1;}
+    to{scale: 1.05;}
+}
+
+@keyframes fade-in{
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
