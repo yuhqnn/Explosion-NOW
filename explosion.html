@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/faviconing.png">
     <link rel="stylesheet" href="style.css">
     <title>explosion</title>
 </head>
@@ -14,15 +15,17 @@
 <body>
 
     <img src="assets/explosion-gif.gif">
-    <h1 id="mainTitle">You exploded!</h1>
-    <p>congratulations on your explosion!</p>
+    <h1 id="mainTitle" title = "congratulations on your explosion!">You exploded!</h1>
     <br>
-    <p id="explosion-count"> explosions: 1</p>
-    <p id="global-count">total explosions: </p>
+    <p id="explosion-count"> you have exploded 1 time.</p>
+    <p id="global-count">total global explosions: </p>
     <button id="explodeAgainBUTTON">explode again</button>
 
     <button id="backBUTTON"> back </button>
 
+    <button id="TestButton"> test: clear local storage</button>
+
+    <img id="full-screen-Explosion" src="assets/explosion-gif-2.gif" >
     <script src="explosion.js"></script>
 </body>
 
