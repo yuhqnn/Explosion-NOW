@@ -6,8 +6,12 @@ const globalExplosionCount = document.getElementById(`global-count`);
 let LocalNum = sessionStorage.getItem('explosion Count');
 const fullScreenGif = document.getElementById(`full-screen-Explosion`)
 const gif = false;
+const sound = new Audio(src = "assets/explosion-sound2.mp3")
+const allowSouond = true;
 
-console.log(LocalNum)
+console.log(LocalNum);
+sound.play();
+
 
 
 if (fullScreenGif.checkVisibility = true) {
@@ -19,54 +23,50 @@ if (fullScreenGif.checkVisibility = true) {
 
 fullScreenGif.src = fullScreenGif.src
 
-if (sessionStorage.getItem('explosion Count') == null){
+if (sessionStorage.getItem('explosion Count') == null) {
     console.log("new session");
     sessionStorage.setItem('explosion Count', 1);
     explosionCountText.textContent = "you have exploded 1 time."
     LocalNum = sessionStorage.getItem('explosion Count');
     console.log(LocalNum);
 }
-else{
+else {
     explosionCountText.textContent = "you have exploded " + LocalNum + " times."
 }
-if (localStorage.getItem('global explosion Count') == null){
-    localStorage.setItem('global explosion Count', 1);
-    console.log("new local storage?")
-}
-else{
-    console.log("same loocal storage?")
-}
 
-ExplodeAgainbtn.onclick = function(){
+ExplodeAgainbtn.addEventListener("click", () => {
     fullScreenGif.src = "assets/explosion-gif-2.gif"
     screenExplosionSwitch();
     let temp = Number(LocalNum)
-    let tempGlobal = Number(localStorage.getItem('global explosion Count'))
+    
     sessionStorage.setItem('explosion Count', temp + 1);
-    localStorage.setItem('global explosion Count', tempGlobal + 1)
     LocalNum = sessionStorage.getItem('explosion Count');
     explosionCountText.textContent = "you have exploded " + LocalNum + " times."
-    globalExplosionCount.textContent = "total global explosions: " + localStorage.getItem("global explosion Count")
+   
     console.log("localNum: " + LocalNum + " Temp: " + temp);
-}
+    sound.duration= 2550;
+    sound.play();
+})
 
 Backbtn.onclick = function () {
     window.location.href = "index.html"
     console.log("meowmeo")
 }
 
-testButtonLocal.onclick = function() {
+testButtonLocal.onclick = function () {
     sessionStorage.clear();
     console.log("Local storage cleared: " + sessionStorage)
 }
 
 
 
-const screenExplosionSwitch = function() {
+const screenExplosionSwitch = function () {
     fullScreenGif.style.display = "block";
     setTimeout(() => {
 
         fullScreenGif.style.display = "none";
         fullScreenGif.src = "assets/placeholder.jpeg"
     }, 2550);
-};
+}
+
+
