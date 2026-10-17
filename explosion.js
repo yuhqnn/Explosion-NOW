@@ -12,6 +12,14 @@ const allowSouond = true;
 console.log(LocalNum);
 sound.play();
 
+const screenExplosionSwitch = function () {
+    fullScreenGif.style.display = "block";
+    setTimeout(() => {
+
+        fullScreenGif.style.display = "none";
+        fullScreenGif.src = "assets/placeholder.jpeg"
+    }, 2550);
+}
 
 
 if (fullScreenGif.checkVisibility = true) {
@@ -53,20 +61,12 @@ Backbtn.onclick = function () {
     console.log("meowmeo")
 }
 
-testButtonLocal.onclick = function () {
-    sessionStorage.clear();
-    console.log("Local storage cleared: " + sessionStorage)
-}
+// testButtonLocal.onclick = function () {
+//     sessionStorage.clear();
+//     console.log("Local storage cleared: " + sessionStorage)
+// }
 
 
 
-const screenExplosionSwitch = function () {
-    fullScreenGif.style.display = "block";
-    setTimeout(() => {
-
-        fullScreenGif.style.display = "none";
-        fullScreenGif.src = "assets/placeholder.jpeg"
-    }, 2550);
-}
 
 
