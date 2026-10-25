@@ -1,0 +1,56 @@
+
+
+#uploading{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 30vh;
+    width: 30vh;
+    background-color: #000;
+    border-color: #d1061b;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#uploaded_something{
+    cursor: url('../assets/cursers/Cursor_17.cur'), auto;
+    width: 100%;
+    height: 100%;
+}
+
+#imgInput{
+    max-width: 30vw;
+    align-items: baseline;
+}
+
+#inputImgControl{
+    max-width: 30vw;
+    max-height: 40vh;
+}
+
+#explosionOverlay {
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display:block;
+}
+
+#duoDiv {
+    max-width: 300px;
+}
+
+.duo{
+    width: 130px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+
+#regenBUTTON :hover {
+    width: 133px;
+}
+
+#newBUTTON :hover {
+    width: 133px;
+}
+
