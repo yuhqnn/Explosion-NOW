@@ -56,9 +56,6 @@
     border-color: rgb(0, 0, 0);
 }
 
-#confirm {
-    
-}
 #confirm:hover{
     width: 190px;
     animation: inverse-hover-animation 5s;
