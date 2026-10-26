@@ -71,16 +71,12 @@ button:hover{
 }
 
 a{
-    color: #e3d1d1;
+    color: #000000;
 }
 
 a:hover {
     color: #fff;
-    animation: pulsing 2s infinite;
-}
-
-footer {
-    p
+    animation: black-to-white 3s infinite;
 }
 
 #backBUTTON{
@@ -105,4 +101,10 @@ footer {
         background-color: #000;
         color: #fff;
     }
+}
+
+@keyframes black-to-white {
+    0%{ color: #000}
+    50%{ color: #fff;}
+    100%{ color:#000}
 }
