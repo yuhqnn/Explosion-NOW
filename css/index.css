@@ -1,0 +1,100 @@
+.text {
+    margin-inline: auto;
+    text-align: center;
+    opacity: 0%;
+    animation: fade-in 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+}
+
+
+#logo-back {
+    width: 300px;
+    height: auto;
+    margin-inline: auto;
+    align-items: center;
+    animation: logo-back-animation 2.5s;
+    scale: 100%;
+    animation-timing-function: cubic-bezier(0.2, 1, 0, 1);
+    opacity: 1;
+    animation-fill-mode: forwards;
+
+}
+
+#logo-text {
+    width: 300px;
+    position: relative;
+    top: -205px;
+    left: 5px;
+    animation: logo-text-animation 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+#logo {
+    height: 200px;
+    width: 300px;
+    margin-inline: auto;
+}
+
+#indexButtons{
+    display: flexbox;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    opacity: 0;
+    animation: fade-in 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+}
+#indexButtons div{
+    
+    background-color: #d1061b;
+}
+
+#gifing {
+    margin-top: 20px;
+    opacity: 0%;
+    animation: fade-in 10s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    max-height: 116px;
+    max-width: 116px;
+}
+
+@keyframes logo-back-animation {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+        rotate: 720deg Y;
+    }
+
+}
+
+@keyframes logo-text-animation {
+    from {
+        opacity: 0%;
+        scale: 2;
+    }
+
+    to {
+        scale: 1;
+        opacity: 100%;
+    }
+}
+@keyframes fade-in {
+    from{ opacity: 0;}
+    to{ opacity: 1;}
+}
+
+@keyframes pulsing {
+    0%{opacity: 50%;}
+    50%{opacity: 100%;}
+    100%{opacity: 50%;}
+}

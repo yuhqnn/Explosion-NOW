@@ -1,0 +1,100 @@
+.modal-containerClass {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.modal-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal {
+    background-color: #d1061b;
+    text-align: center;
+    box-shadow: 0px 2px 4px #910616;
+    padding: 20px 50px;
+    width: 600px;
+    max-width: 100%;
+    
+}
+.modal p{
+    color:#fff;
+    opacity: 0.7;
+    animation: pulsing 2s infinite;
+}
+
+#inverseTitle {
+    font-family: 'Jacquard 24';
+    font-weight: 400;
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.inverseButton{
+    margin: 20px;
+    padding: 10px;
+    width: 190px;
+    color: #000;
+    font-family: 'Jacquard 24';
+    font-size: 20px;
+    background-color: #fff;
+    border-color: rgb(0, 0, 0);
+}
+
+#confirm {
+    
+}
+#confirm:hover{
+    width: 190px;
+    animation: inverse-hover-animation 5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    cursor: url('../assets/cursers/Cursor_15.cur');
+}
+
+#return:hover{
+     width: 190px;
+     animation: hover-animation 0.2s infinite;
+    animation-fill-mode: forwards;
+    color: #d1061b;
+    background-color: #ffffff;
+}
+
+@keyframes pulsing {
+    0%{opacity: 50%;}
+    50%{opacity: 100%;}
+    100%{opacity: 50%;}
+}
+
+@keyframes fade-in{
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
