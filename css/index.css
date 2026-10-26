@@ -55,7 +55,7 @@
     background-color: #d1061b;
 }
 
-#gif {
+#gifing {
     margin-top: 20px;
     opacity: 0%;
     animation: fade-in 10s;
@@ -91,4 +91,10 @@
 @keyframes fade-in {
     from{ opacity: 0;}
     to{ opacity: 1;}
+}
+
+@keyframes pulsing {
+    0%{opacity: 50%;}
+    50%{opacity: 100%;}
+    100%{opacity: 50%;}
 }

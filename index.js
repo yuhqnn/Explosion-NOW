@@ -39,7 +39,4 @@ if (sessionStorage.getItem('gih') == true) {
 Sillybtn.onclick = function () {
     window.location.href = "colon3.html"
 }
-inforBtn.onclick = function () {
-    window.open('https://github.com/yuhqnn/Explosion-NOW');
-}
 
